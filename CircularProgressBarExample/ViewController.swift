@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         trackLayer.strokeColor = UIColor.gray.cgColor
         trackLayer.lineWidth = 10
         trackLayer.fillColor = UIColor.clear.cgColor
-        trackLayer.lineCap = kCALineCapRound
         view.layer.addSublayer(trackLayer)
         
         // line
