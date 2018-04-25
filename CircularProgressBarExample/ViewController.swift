@@ -119,7 +119,7 @@ extension ViewController: URLSessionDownloadDelegate {
         DispatchQueue.main.async {
            self.completedLabel.isHidden = false
         }
-        
+
     }
     
     
