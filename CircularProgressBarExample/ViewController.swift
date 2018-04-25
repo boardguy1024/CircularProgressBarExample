@@ -75,7 +75,7 @@ class ViewController: UIViewController {
         print("Circle tapped!!")
         
         beginDownlodingFile()
-        animateCircle()
+        //animateCircle()
     }
 
 }
@@ -84,7 +84,16 @@ extension ViewController: URLSessionDownloadDelegate {
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
         
-        print(totalBytesWritten, totalBytesExpectedToWrite)
+        //print(totalBytesWritten, totalBytesExpectedToWrite)
+        
+        let percentage = CGFloat(totalBytesWritten) / CGFloat(totalBytesExpectedToWrite)
+        
+        print("isMainThread? : \(Thread.isMainThread)")
+        
+       // shapeLayer.strokeEnd = percentage
+        DispatchQueue.main.async {
+            self.shapeLayer.strokeEnd = percentage
+        }
     }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
