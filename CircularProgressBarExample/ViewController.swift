@@ -22,6 +22,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        view.backgroundColor = .black
+        percentageLabel.textColor = .white
+        completedLabel.textColor = .yellow
         completedLabel.isHidden = true
         
         let circularPath = UIBezierPath(arcCenter: .zero, radius: 100, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
@@ -29,7 +32,7 @@ class ViewController: UIViewController {
         // trackLayer
         let trackLayer = CAShapeLayer()
         trackLayer.path = circularPath.cgPath
-        trackLayer.strokeColor = UIColor.gray.cgColor
+        trackLayer.strokeColor = UIColor.darkGray.cgColor
         trackLayer.lineWidth = 10
         trackLayer.fillColor = UIColor.clear.cgColor
         view.layer.addSublayer(trackLayer)
