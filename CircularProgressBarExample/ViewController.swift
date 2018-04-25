@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         let trackLayer = CAShapeLayer()
         trackLayer.path = circularPath.cgPath
         trackLayer.strokeColor = UIColor.darkGray.cgColor
-        trackLayer.lineWidth = 10
+        trackLayer.lineWidth = 20
         trackLayer.fillColor = UIColor.clear.cgColor
         view.layer.addSublayer(trackLayer)
         trackLayer.position = view.center
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         // line
         shapeLayer.path = circularPath.cgPath
         shapeLayer.strokeColor = UIColor.red.cgColor
-        shapeLayer.lineWidth = 10
+        shapeLayer.lineWidth = 20
         shapeLayer.fillColor = UIColor.clear.cgColor
         //strokeEndのdefaultは1なのでstrokeが全部描画される
         //0は当然描画なし、0.5は半分描画される
